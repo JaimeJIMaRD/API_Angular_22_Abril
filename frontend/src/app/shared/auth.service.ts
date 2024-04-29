@@ -7,6 +7,7 @@ export class User {
   email!: String;
   password!: String;
   password_confirmation!: String;
+  role_id: any;
 }
 @Injectable({
   providedIn: 'root',

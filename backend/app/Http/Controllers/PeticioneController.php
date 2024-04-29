@@ -62,7 +62,7 @@ class PeticioneController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request‐>all(),
+        $validator = Validator::make($request->all(),
             [
                 'titulo' => 'required|max:255',
                 'descripcion' => 'required',
@@ -70,7 +70,7 @@ class PeticioneController extends Controller
                 'categoria_id' => 'required',
                 //'file' => 'required',
             ]);
-        if ($validator‐>fails()) {
+        if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 401);
         }
         $validator = Validator::make($request->all(),
